@@ -10,7 +10,7 @@ const Brands = () => {
   ];
 
   return (
-    <section className="bg-grey py-8">
+    <section className="bg-gray-100 py-8">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-20">
         <div className="flex items-center justify-between flex-wrap gap-8">
           {brands.map((brand) => (

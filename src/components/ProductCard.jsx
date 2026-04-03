@@ -10,6 +10,7 @@ const ProductCard = ({ image, title, rating, price, category }) => {
         <FaStar 
           key={i} 
           className={i < fullStars ? "text-yellow-400" : "text-gray-300"} 
+          size={16}
         />
       );
     }
@@ -17,29 +18,29 @@ const ProductCard = ({ image, title, rating, price, category }) => {
   };
 
   return (
-    <div className="w-[295px] flex flex-col group cursor-pointer">
-      <div className="relative h-[298px] rounded-[20px] overflow-hidden mb-4">
+    <div className="flex flex-col group cursor-pointer">
+      <div className="relative w-full h-48 sm:h-64 rounded-lg sm:rounded-2xl overflow-hidden mb-4 bg-white">
         <img 
           src={image} 
           alt={title} 
-          className="w-full h-full object-contain bg-white p-4 transition-transform duration-300 group-hover:scale-105" 
+          className="w-full h-full object-contain p-2 sm:p-4 transition-transform duration-300 group-hover:scale-105" 
         />
-        <span className="absolute top-4 left-4 bg-black text-white text-xs px-3 py-1 rounded-full capitalize">
+        <span className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-black text-white text-xs px-2 py-1 sm:px-3 sm:py-1 rounded-full capitalize font-medium">
           {category}
         </span>
         <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/5" />
       </div>
 
-      <div className="px-2">
-        <h3 className="text-lg font-medium mb-2 transition-colors duration-300 group-hover:text-gray-700 line-clamp-2">{title}</h3>
-        <div className="flex items-center mb-2">
-          <div className="flex mr-2">
+      <div className="flex-1 flex flex-col">
+        <h3 className="text-sm sm:text-base font-medium mb-2 transition-colors duration-300 group-hover:text-gray-700 line-clamp-2 leading-tight">{title}</h3>
+        <div className="flex items-center gap-2 mb-2">
+          <div className="flex gap-1">
             {renderStars()}
           </div>
-          <span className="text-sm text-gray-600">({rating.count})</span>
+          <span className="text-xs sm:text-sm text-gray-600">({rating.count})</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-lg font-bold transition-colors duration-300 group-hover:text-black">${price}</span>
+        <div className="flex items-center justify-between mt-auto">
+          <span className="text-base sm:text-lg font-bold text-black">${price.toFixed(2)}</span>
         </div>
       </div>
       <div className="h-1 w-0 bg-black mt-2 transition-all duration-300 group-hover:w-full"></div>

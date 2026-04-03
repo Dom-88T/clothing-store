@@ -5,10 +5,38 @@
 @layer base {
   html {
     font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-gray-50;
+    @apply bg-gray-50 text-gray-900;
+    line-height: 1.5;
+  }
+
+  /* Mobile first typography */
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black tracking-tight;
+  }
+}
+
+/* Global spacing fixes */
+@layer components {
+  section {
+    @apply scroll-mt-20;
+  }
+
+  /* Ensure proper spacing on mobile */
+  @media (max-width: 640px) {
+    * {
+      @apply scroll-smooth;
+    }
   }
 }
 
@@ -21,4 +49,17 @@
 
 .animate-spin {
   animation: spin 1s linear infinite;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent text overflow on mobile */
+@media (max-width: 768px) {
+  body {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
 }

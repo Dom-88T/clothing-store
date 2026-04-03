@@ -8,6 +8,23 @@
   "env": {
     "VITE_API_URL": "@vite_api_url"
   },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        }
+      ]
+    }
+  ],
   "functions": {
     "api/**/*.js": {
       "memory": 1024,

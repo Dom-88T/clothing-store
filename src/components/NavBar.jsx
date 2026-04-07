@@ -39,7 +39,7 @@ const NavBar = () => {
           />
         </div>
 
-        <button aria-label="Cart" className="relative hover:bg-gray-100 p-2 rounded-full transition-colors">
+        <button onClick={() => navigate('/cart')} aria-label="Cart" className="relative hover:bg-gray-100 p-2 rounded-full transition-colors">
           {<img src={CartIcon} alt="Cart" className="h-10 w-10" /> }
           {totalQuantity > 0 && (
             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-1">
@@ -58,7 +58,7 @@ const NavBar = () => {
           onKeyDown={handleSearch}
           className="flex-grow bg-gray-100 rounded-full px-4 py-2 text-sm focus:outline-none"
         />
-        <button aria-label="Cart" className="relative p-2">
+        <button onClick={() => navigate('/cart')} aria-label="Cart" className="relative p-2">
           <img src={CartIcon} alt="Cart" className="h-10 w-10" />
           {totalQuantity > 0 && (
             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-1">

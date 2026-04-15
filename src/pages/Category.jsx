@@ -5,7 +5,7 @@ import TopBanner from '../components/TopBanner';
 import NavBar from '../components/NavBar';
 import ProductGrid from '../components/ProductGrid';
 import Filters from './Filters';
-import Newsletter from '../components/Newsletter';
+import Newsletter from '../components/Newsletter.jsx';
 import Footer from '../components/Footer';
 
 const Category = () => {

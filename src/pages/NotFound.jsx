@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TopBanner from '../components/TopBanner';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+import TopBanner from '../components/TopBanner.jsx';
+import NavBar from '../components/NavBar.jsx';
+import Footer from '../components/Footer.jsx';
 
 const NotFound = () => {
   return (

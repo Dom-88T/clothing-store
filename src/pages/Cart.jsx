@@ -2,10 +2,10 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { removeItemFromCart, updateItemQuantity } from '../store/cartSlice';
-import TopBanner from '../components/TopBanner';
-import NavBar from '../components/NavBar';
-import Newsletter from '../components/Newsletter';
-import Footer from '../components/Footer';
+import TopBanner from '../components/TopBanner.jsx';
+import NavBar from '../components/NavBar.jsx';
+import Newsletter from '../components/Newsletter.jsx';
+import Footer from '../components/Footer.jsx';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);

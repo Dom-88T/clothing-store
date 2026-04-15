@@ -3,10 +3,10 @@ import { useParams, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux'; 
 import { addItemToCart } from '../store/cartSlice'; 
 import { useGetProductByIdQuery } from '../services/api'; 
-import TopBanner from '../components/TopBanner'; 
-import NavBar from '../components/NavBar'; 
-import Newsletter from '../components/Newsletter';
-import Footer from '../components/Footer';
+import TopBanner from '../components/TopBanner.jsx'; 
+import NavBar from '../components/NavBar.jsx'; 
+import Newsletter from '../components/Newsletter.jsx';
+import Footer from '../components/Footer.jsx';
 
 const ProductDetail = () => {
   const { id } = useParams();

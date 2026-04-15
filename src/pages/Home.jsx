@@ -1,14 +1,14 @@
 import React from 'react';
 
-import TopBanner from '../components/TopBanner';
-import NavBar from '../components/NavBar';
-import Hero from '../components/Hero';
-import Brands from '../components/Brands';
-import ProductGrid from '../components/ProductGrid';
-import BrowseByStyle from '../components/BrowseByStyle';
-import Testimonials from '../components/Testimonials';
-import Newsletter from '../components/Newsletter';
-import Footer from '../components/Footer';
+import TopBanner from '../components/TopBanner.jsx';
+import NavBar from '../components/NavBar.jsx';
+import Hero from '../components/Hero.jsx';
+import Brands from '../components/Brands.jsx';
+import ProductGrid from '../components/ProductGrid.jsx';
+import BrowseByStyle from '../components/BrowseByStyle.jsx';
+import Testimonials from '../components/Testimonials.jsx';
+import Newsletter from '../components/Newsletter.jsx';
+import Footer from '../components/Footer.jsx';
 
 
 const Home = () => {

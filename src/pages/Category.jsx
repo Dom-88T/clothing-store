@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useGetProductsQuery } from '../services/api';
-import TopBanner from '../components/TopBanner';
-import NavBar from '../components/NavBar';
-import ProductGrid from '../components/ProductGrid';
+import TopBanner from '../components/TopBanner.jsx';
+import NavBar from '../components/NavBar.jsx';
+import ProductGrid from '../components/ProductGrid.jsx';
 import Filters from './Filters';
 import Newsletter from '../components/Newsletter.jsx';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer.jsx';
 
 const Category = () => {
   const { category } = useParams();

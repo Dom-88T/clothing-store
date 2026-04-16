@@ -4,7 +4,7 @@ import { useGetProductsQuery } from '../services/api';
 import TopBanner from '../components/TopBanner.jsx';
 import NavBar from '../components/NavBar.jsx';
 import ProductGrid from '../components/ProductGrid.jsx';
-import Filters from './Filters';
+import Filters from './Filters.jsx';
 import Newsletter from '../components/Newsletter.jsx';
 import Footer from '../components/Footer.jsx';
 
